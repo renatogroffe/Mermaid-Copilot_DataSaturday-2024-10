@@ -88,3 +88,112 @@ erDiagram
 
     Regioes ||--o{ Estados: "possui"
 ```
+
+---
+
+## Flowchart
+
+Pergunta ao Copilot:
+
+```
+Como seria em um fluxograma do Mermaid uma rotina automatizada de backup do SQL Server?
+```
+
+Resultado:
+
+```mermaid
+graph TD
+    A[Início] --> B[Verificar espaço em disco]
+    B -->|Espaço suficiente| C[Conectar ao SQL Server]
+    B -->|Espaço insuficiente| G[Enviar alerta de espaço insuficiente]
+    C --> D[Iniciar backup]
+    D --> E[Verificar integridade do backup]
+    E -->|Sem problemas de integridade| F[Salvar backup e registrar log]
+    E -->|Backup corrompido| H[Enviar alerta de falha no backup]
+    F --> I[Fim]
+    G --> I[Fim]
+    H --> I[Fim]
+```
+
+---
+
+## Diagrama de sequência
+
+Pergunta ao Copilot:
+
+```
+Como seria um diagrama de sequência em Mermaid de um processo de ETL que usa arquivos do Excel como origem e que estão no Azure Storage, processando os dados via Azure Data Factory e consolidando isso numa base do Azure SQL?
+```
+
+Resposta:
+
+```mermaid
+sequenceDiagram
+    actor Usuário
+    participant AzureStorage as Azure Storage
+    participant ADF as Azure Data Factory
+    participant AzureSQL as Azure SQL Database
+
+    Usuário->>AzureStorage: Upload arquivos Excel
+    AzureStorage->>ADF: Notificação de novos arquivos
+    ADF->>AzureStorage: Ler arquivos Excel
+    ADF->>ADF: Processar dados (Transformação)
+    ADF->>AzureSQL: Carregar dados transformados
+    AzureSQL->>Usuário: Confirmação de dados carregados
+```
+
+## Diagrama de classes
+
+Estrutura:
+
+```csharp
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
+namespace BenchmarkingDapperEFCoreCRMMySql.EFCore;
+
+public class Empresa
+{
+    [Key]
+    public int IdEmpresa { get; set; }
+    public string? CNPJ { get; set; }
+    public string? Nome { get; set; }
+    public string? Cidade { get; set; }
+    public List<Contato>? Contatos { get; set; }
+}
+
+public class Contato
+{
+    [Key]
+    public int IdContato { get; set; }
+    public string? Nome { get; set; }
+    public string? Telefone { get; set; }
+
+    [ForeignKey("IdEmpresa")]
+    [JsonIgnore]
+    public Empresa? EmpresaRepresentada { get; set; }
+}
+```
+
+Resultado:
+
+```mermaid
+classDiagram
+    class Empresa {
+        int IdEmpresa
+        string? CNPJ
+        string? Nome
+        string? Cidade
+        List~Contato~? Contatos
+    }
+
+    class Contato {
+        int IdContato
+        string? Nome
+        string? Telefone
+        Empresa? EmpresaRepresentada
+    }
+
+    Empresa "1" --> "0..*" Contato : Contatos
+```
