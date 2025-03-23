@@ -17,7 +17,7 @@ Evento: **Data Saturday Vitória 2024**
 
 Links do evento: **[SQLSaturday](https://sqlsaturday.com/2024-10-26-sqlsaturday1100/)** | **[Data ES - Site](https://dataes.com.br/)** | **[Sessionize](https://sessionize.com/sql-saturday-vitoria-2024/)**
 
-Local: **PECEGE - Rua Cezira Giovanoni Moretti, 580 - Santa Rosa - Vitória-ES - CEP: 13414-157**
+Local: **UniSales - Centro Universitário Salesiano - Avenida Vitória, 950 - Forte São João - Vitória-ES - CEP: 29017-022**
 
 Deixo aqui meus agradecimentos ao **Dirceu Resende**, ao **Talles Valiatti** e demais organizadores por todo o apoio para que eu partipasse como palestrante de mais uma edição do **Data Saturday** em **Vitória**.
 
