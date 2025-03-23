@@ -19,7 +19,7 @@ Links do evento: **[SQLSaturday](https://sqlsaturday.com/2024-10-26-sqlsaturday1
 
 Local: **PECEGE - Rua Cezira Giovanoni Moretti, 580 - Santa Rosa - Vitória-ES - CEP: 13414-157**
 
-Deixo aqui meus agradecimentos ao **Dirceu Resende**, ao **Talles Valiatti** e demais organizadores por todo o apoio para que eu partipasse como palestrante de mais uma edição do **DEVPIRA Festival**.
+Deixo aqui meus agradecimentos ao **Dirceu Resende**, ao **Talles Valiatti** e demais organizadores por todo o apoio para que eu partipasse como palestrante de mais uma edição do **Data Saturday** em **Vitória**.
 
 ---
 
